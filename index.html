@@ -9,6 +9,14 @@
 <body>
 	<header class="header">
         <img src="assets/img/home.svg" alt="Logo" class="img_menu">
+
+        <!-- Opcionalment, per la barra de navegació és pot utilitzar el tag <nav>, podent quedar
+        <nav>
+          <a href="index.html"><strong>Inici</strong></a>
+          <a href="cv.html"><strong>Currículum Vitae</strong></a>
+          <a href="contacte.html"><strong>Contacte</strong></a>
+        </nav> -->
+
         <ul>
           <li><a href="index.html"><strong>Inici</strong></a></li>
           <li><a href="cv.html"><strong>Currículum Vitae</strong></a></li>
@@ -41,6 +49,10 @@
         	<img src="https://picsum.photos/id/10/300/300">
           	<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla ligula nisi, bibendum eu consequat quis, finibus sed nunc. Maecenas tempus, elit a accumsan imperdiet, nibh mauris sagittis neque, vel pellentesque quam purus sit amet nunc. Suspendisse molestie erat nibh, sodales porttitor neque rutrum in. Donec tempor eros at felis laoreet euismod. Proin semper, nisi et consectetur facilisis, velit purus feugiat dolor, a accumsan neque lorem vitae purus. Fusce ac dolor dolor. Sed iaculis ipsum in varius condimentum. Praesent efficitur dignissim justo, at fermentum erat tincidunt quis. Morbi ac purus eros. Quisque ut mollis augue. Etiam placerat non mauris a laoreet.
        </p>
+       <!-- Si es vol posar un botó, seria més correcte utilitzar el tag <button>Llegir més</button>, tot i que depèn una mica de la funcionalitat que es vulgui. 
+       Si al fer clic ha de portar a una altra pàgina o un altre apartat dins de la mateixa pàgina, seria més correcte un link <a href="...">Llegir més</a>
+       Si es vol un altre tipus de funcionalitat, per exemple obrir un popup o alguna altra interacció, un <button>Llegir més</button> també estaria bé
+       <input type="submit" value=""> és millor reservar-lo estrictament per a formularis. -->
        <input type="submit" name="enviar" id="enviar" value="Llegir més" class="llegirMes"/>
        </div>
         <div class="projecte">
@@ -62,6 +74,7 @@
     <section class="bg-black">
       <h2 id="experiencia">Experiència!</h2>
       <div class="dades">
+        <!-- Segons com es treballi el CSS, es podria estalviar un div -->
         <div>
          <img src="assets/img/grafic_html.svg" width="96" height="95">
          <img src="assets/img/grafic_css.svg" width="96" height="95">
@@ -75,6 +88,14 @@
     <section>
       <h2 id="aficions">Les meves aficions</h2>
       <div class="dades">
+        <!-- si volem acompanya un text amb una imatge o icona, sobretot si el contenidor el treballem amb flexbox, és molt habitual utilitzar un contenidor extra
+        per tal d'englobar aquests elements. D'aquesta manera és més fàcil ajustar-ho, ja que des del contenidor principal hem de trebllar amb la meitat d'elements (només els div .item) 
+        Per exemple, es podria tenir:
+        <div class="item">
+          <p>Viatjar</p>
+          <img src="assets/img/airplane-outline.svg" width="32" height="32">
+        </div> -->
+
         <p>Viatjar</p>
         <img src="assets/img/airplane-outline.svg" width="32" height="32">
         <p>Llegir</p>

@@ -1,3 +1,23 @@
+/*
+A les mediaqueries només cal escriure aquelles propietats que canvien entre una mida de pantalla i una altra.
+Si es vol utilitzar una aproximació mobile-first, per exemple, tots els estils en mòbil podrien anar fora de media-query, i tota la resta
+de tablet, cap amunt, posar-ho en les mediaqueries corresponents. Per exemple::after
+
+.dades {
+	display: flex;
+	flex-direction:column;
+	justify-content: center
+}
+@media only screen and (min-width: 768px){
+	.dades {
+		flex-direction:row;
+		justify-content: space-evenly;
+	}
+
+}
+*/
+
+
 /*Movil*/
 @media only screen and (max-width: 768px) {
 	html {
@@ -69,6 +89,9 @@
 	.bg-black {
 	  background-color: #000;
 	}
+	/* en mòbil és bastant habitual posar el contingut en columna per tal que no quedi tan apretat. 
+	Per exemple, es podria afegir flex-direction: column, o bé utilitzar la propietat flex-wrap: wrap, que el que fa 
+	és que arribat a un punt, deixa d'apretar els continguts i genera un salt de línia */
 	.dades {
 	  display: flex;
 	  justify-content: space-evenly;
